@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{authblk}
+\usepackage{biblatex}
+
+\addbibresource{bibliography.bib}
+
+\title{Evaluación de costos de maquinas virtuales}
+
+\date{\today}
+
+\author{
+    ********************************* \\
+    ********************************* \\
+    Enrique Francisco Flores Teniente
+  }
+
+\affil{UTEC}
+
+\begin{document}
+\maketitle
+
+En el presente informe, vamos a analizar y comparar los precios de los proveedores lideres de cloud computing.
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+La Organización de las naciones Unidas (ONI) desea
+procesar los datos de censos de población y vivienda de
+cada uno de sus 193 países miembro para poder establecer
+un mapa de pobreza mundial y poder brindar ayuda de
+salud y humanitaria en el futuro. Para ello, requieren de multiples maquinas virtuales capaces de procesar los datos de cada país durante un periodo de 45 días.
+Los requisitos minimos son los siguientes:
+
+\subsubsection*{100 maquinas para realizar calculos}
+  \begin{itemize}
+    \item 2 CPU
+    \item 2 GB de RAM
+    \item 20 GB de almacenamiento (SSD)
+  \end{itemize}
+
+\subsubsection*{maquinas para la base de datos:}
+  \begin{itemize}
+    \item 4 CPU
+    \item 16 GB de RAM
+    \item 750 GB de almacenamiento (SSD)
+  \end{itemize}
+
+Nuestro objetivo es encontrar el proveedor que nos ofrezca el mejor precio para el procesamiento de los datos.
+
+\section{Criterio de región}
+
+\subsection{Requerimientos}
+    
+Para elegir la region adecuada nos basamos en 4 criterios \cite{choosing_region}
+  \subsubsection*{Politicas}
+    La maquina virtual debe estar situada en America para cumplir con la política de privacidad de datos.
+  \subsubsection*{Costos}
+    Este criterio sera el principal determinante, por lo que haremos una comparacion de precios.
+  \subsubsection*{Latencia}
+    No sabemos desde donde se realizara la investigación, por lo que podemos ignorar este criterio. Unicamente intentaremos que todas las maquinas virtuales esten en la misma region.
+  \subsubsection*{Servicios}
+    Durante el proyecto se necesitara una gran potencia de cómputo, por lo que se debe elegir una region que tenga disponible algun servicio con esta caracteristica.
+
+  \subsection{Proveedores}
+
+  \subsubsection*{Amazon Web Services (AWS)}
+    
+    
+
+  \subsubsection*{Microsoft Azure}
+  \subsubsection*{Google Cloud Platform (GCP)}
+
+\section{Elección de maquina virtual}
+  \subsection{Amazon Web Services (AWS)}
+  \subsection{Microsoft Azure}
+  \subsection{Google Cloud Platform (GCP)}
+
+\section{Comparación de precios}
+  \subsection{Amazon Web Services (AWS)}
+  \subsection{Microsoft Azure}
+  \subsection{Google Cloud Platform (GCP)}
+
+\section{Recomendación final}
+
+\section{Imágenes, esquemas y diagramas comparativos}
+
+
+\printbibliography
+
+\end{document}
