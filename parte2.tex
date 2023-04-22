@@ -2,6 +2,10 @@
 
 \usepackage{authblk}
 \usepackage{biblatex}
+\usepackage{booktabs, multirow} % for borders and merged ranges
+\usepackage{soul}% for underlines
+\usepackage[table]{xcolor} % for cell colors
+\usepackage{changepage,threeparttable} % for wide tables
 
 \addbibresource{bibliography.bib}
 
@@ -68,6 +72,40 @@ Para elegir la region adecuada nos basamos en 4 criterios \cite{choosing_region}
 
   \subsubsection*{Amazon Web Services (AWS)}
     
+
+
+% \usepackage{booktabs, multirow} % for borders and merged ranges
+% \usepackage{soul}% for underlines
+% \usepackage[table]{xcolor} % for cell colors
+% \usepackage{changepage,threeparttable} % for wide tables
+%If the table is too wide, replace \begin{table}[!htp]...\end{table} with
+%\begin{adjustwidth}{-2.5 cm}{-2.5 cm}\centering\begin{threeparttable}[!htb]...\end{threeparttable}\end{adjustwidth}
+\begin{table}[!htp]\centering
+
+  \caption{Precios MV computo}\label{tab: }
+  \scriptsize
+  \begin{tabular}{lrrrrrrr}\toprule
+
+  Region &Instancia &vCPU &memoria &Network &Costo Mensual &Costo total \\\midrule
+  \multirow{3}{*}{us-east} &t4g.small &2 &2 GiB &Up to 5 Gigabit &1,226.40 &2,452.80 \\
+  &c4.large &2 &3.75 GiB &Moderate &7,300.00 &14,600.00 \\
+  &t2.medium &2 &4 GiB &Low to Moderate &3,387.20 &6,774.40 \\
+  \midrule
+  \multirow{3}{*}{Canada} &t4g.small &2 &2 GiB &Up to 5 Gigabit &1,343.20 &2,686.40 \\
+  &c4.large &2 &3.75 GiB &Moderate &8,030.00 &16,060.00 \\
+  &t2.medium &2 &4 GiB &Low to Moderate &3,737.60 &7,475.20 \\
+  \midrule
+  \multirow{3}{*}{us-west} &t4g.small &2 &2 GiB &Up to 5 Gigabit &1,460.00 &2,920.00 \\
+  &c4.large &2 &3.75 GiB &Moderate &9,052.00 &18,104.00 \\
+  &t2.medium &2 &4 GiB &Low to Moderate &4,029.60 &8,059.20 \\
+  \midrule
+  \multirow{3}{*}{Sao-Paulo} &t4g.small &2 &2 GiB &Up to 5 Gigabit &1,956.40 &3,912.80 \\
+  &c4.large &2 &3.75 GiB &Moderate &11,315.00 &22,630.00 \\
+  &t2.medium &2 &4 GiB &Low to Moderate &5,431.20 &10,862.40 \\
+  \bottomrule
+
+  \end{tabular}
+\end{table}
     
 
   \subsubsection*{Microsoft Azure}
