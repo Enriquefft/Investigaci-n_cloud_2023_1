@@ -4,16 +4,16 @@
 \usepackage{authblk}
 \usepackage{biblatex}
 \usepackage{booktabs, multirow} % for borders and merged ranges
-% \usepackage{soul}% for underlines
+\usepackage{soul}% for underlines
 \usepackage[table]{xcolor} % for cell colors
-% \usepackage{changepage,threeparttable} % for wide tables
+\usepackage{changepage,threeparttable} % for wide tables
 \addbibresource{bibliography.bib}
 
 
 \newcommand{\usd}[1]{\SI{#1}[\$\ensuremath{\,}]{}}
 
 
-\title{Evaluación de costos de maquinas virtuales}
+\title{Proyecto ONU}
 
 \date{\today}
 
@@ -76,12 +76,6 @@ Para elegir la region adecuada nos basamos en 4 criterios \cite{choosing_region}
 
   \subsubsection*{Amazon Web Services (AWS)}
 
-% \usepackage{booktabs, multirow} % for borders and merged ranges
-% \usepackage{soul}% for underlines
-% \usepackage[table]{xcolor} % for cell colors
-% \usepackage{changepage,threeparttable} % for wide tables
-%If the table is too wide, replace \begin{table}[!htp]...\end{table} with
-%\begin{adjustwidth}{-2.5 cm}{-2.5 cm}\centering\begin{threeparttable}[!htb]...\end{threeparttable}\end{adjustwidth}
 \begin{table}[!htp]\centering
 
   \caption{Precios MV computo}\label{tab: }
@@ -136,12 +130,86 @@ Region &Instancia &vCPU &memoria &almacenamiento &Network &Costo Mensual &Costo 
 \end{tabular}
 \end{table}
 
+\newpage
   
   \subsubsection*{Microsoft Azure}
 
+  \begin{table}[!htp]\centering
+\caption{Precios computo}\label{tab: }
+\scriptsize
+\begin{tabular}{lrrrrrrr}\toprule
+Instancias &vCPU &RAM &Precio/mes (contado) &STORAGE &100 instancias * 2 meses &Region \\\midrule
+A2 v2 &2 &4GB &\$25.1822/mes &20GB &\$5036.42 &EAST US \\
+A2 v2 &2 &4GB &\$6.6591/mes &20GB &\$1331.82 &CENTRAL US \\
+A2 v2 &2 &4GB &\$6.7664/mes &20GB &\$1353.28 &NORTH CENTRAL US \\
+A2 v2 &2 &4GB &\$6.7540/mes &20GB &\$1350.8 &SOUTH CENTRAL US \\
+A2 v2 &2 &4GB &\$6.2211/mes &20GB &\$1244.22 &WEST CENTRAL US \\
+\bottomrule
+\end{tabular}
+\end{table}
 
+\begin{table}[!htp]\centering
+\caption{Precios base de datos}\label{tab: }
+\scriptsize
+\begin{tabular}{lrrrrrrr}\toprule
+Instancias &vCPU &RAM &Precio/mes (contado) &STORAGE &20 instancias * 2 meses &Region \\\midrule
+D16pds v5 &16 &64GB &\$168.8928/mes &600GB &\$6755.712 &EAST US \\
+D16pds v5 &16 &64GB &\$238.8560/mes &600GB &\$9554.24 &CENTRAL US \\
+D16pds v5 &16 &64GB &\$211.1160/mes &600GB &\$8444.64 &NORTH CENTRAL US \\
+D16pds v5 &16 &64GB &\$253.1640/mes &600GB &\$10126.56 &SOUTH CENTRAL US \\
+D16pds v5 &16 &64GB &\$253.4560/mes &600GB &\$10138.24 &WEST CENTRAL US \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
 
   \subsubsection*{Google Cloud Platform (GCP)}
+
+\begin{adjustwidth}{-2.5 cm}{-2.5 cm}\centering\begin{threeparttable}[!htb]
+    \centering
+\caption{Precios computo}\label{tab: }
+\scriptsize
+\begin{tabular}{lrrrrrrrrrr}\toprule
+\cellcolor[HTML]{f1c232}Instancia &\cellcolor[HTML]{f1c232}Machine Family &\cellcolor[HTML]{f1c232}Serie &\cellcolor[HTML]{f1c232}Machine Type &\cellcolor[HTML]{f1c232}CPU &\cellcolor[HTML]{f1c232}RAM &\cellcolor[HTML]{f1c232}SSD &\cellcolor[HTML]{f1c232}Locacion &\cellcolor[HTML]{f1c232}Costo /mes &\cellcolor[HTML]{f1c232}Costo total \\\midrule
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Iowa &\cellcolor[HTML]{ffd966}3011.39 &\cellcolor[HTML]{ffff00}\textbf{6022.78} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}South Carolina &\cellcolor[HTML]{ffd966}3011.39 &\cellcolor[HTML]{ffff00}\textbf{6022.78} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Northern Virginia &\cellcolor[HTML]{ffd966}3382.82 &\cellcolor[HTML]{ffd966}\textbf{6765.64} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Dallas &\cellcolor[HTML]{ffd966}3553.44 &\cellcolor[HTML]{ffd966}\textbf{7106.88} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Oregon &\cellcolor[HTML]{ffd966}3011.39 &\cellcolor[HTML]{ffff00}\textbf{6022.78} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Los Angeles &\cellcolor[HTML]{ffd966}3616.76 &\cellcolor[HTML]{ffd966}\textbf{7233.52} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Salt Lake City &\cellcolor[HTML]{ffd966}3616.76 &\cellcolor[HTML]{ffd966}\textbf{7233.52} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Las Vegas &\cellcolor[HTML]{ffd966}3382.82 &\cellcolor[HTML]{ffd966}\textbf{6765.64} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Columbus &\cellcolor[HTML]{ffd966}3011.39 &\cellcolor[HTML]{ffff00}\textbf{6022.78} \\
+\cellcolor[HTML]{ffff00}100 &\cellcolor[HTML]{ffff00}General purpose &\cellcolor[HTML]{ffff00}E2 &\cellcolor[HTML]{ffff00}HightCPU &\cellcolor[HTML]{ffff00}2 &\cellcolor[HTML]{ffff00}2 &\cellcolor[HTML]{ffff00}20 &\cellcolor[HTML]{ffff00}lowa &\cellcolor[HTML]{ffff00}3011.39 &\cellcolor[HTML]{ffff00}\textbf{6022.78} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}Compute-optimized &\cellcolor[HTML]{ffd966}C2D &\cellcolor[HTML]{ffd966}HightCPU &\cellcolor[HTML]{ffd966}2 &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}lowa &\cellcolor[HTML]{ffd966}4387.95 &\cellcolor[HTML]{ffd966}\textbf{8775.9} \\
+\cellcolor[HTML]{ffd966}100 &\cellcolor[HTML]{ffd966}Compute-optimized &\cellcolor[HTML]{ffd966}C2 &\cellcolor[HTML]{ffd966}Standar &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Iowa &\cellcolor[HTML]{ffd966}10136.29 &\cellcolor[HTML]{ffd966}\textbf{20272.58} \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}\end{adjustwidth}
+
+
+
+\begin{adjustwidth}{-2.5 cm}{-2.5 cm}\centering\begin{threeparttable}[!htb]
+\caption{Precios base de datos}\label{tab: }
+\scriptsize
+\begin{tabular}{lrrrrrrrrrr}\toprule
+\cellcolor[HTML]{f1c232}Instances &\cellcolor[HTML]{f1c232}Machine Family &\cellcolor[HTML]{f1c232}Seres &\cellcolor[HTML]{f1c232}Machine Type &\cellcolor[HTML]{f1c232}CPU &\cellcolor[HTML]{f1c232}RAM &\cellcolor[HTML]{f1c232}SSD &\cellcolor[HTML]{f1c232}location &\cellcolor[HTML]{f1c232}Costo /mes &\cellcolor[HTML]{f1c232}Costo total \\\midrule
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Iowa &\cellcolor[HTML]{ffd966}3997.45 &\cellcolor[HTML]{ffff00}\textbf{7994.9} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}South Carolina &\cellcolor[HTML]{ffd966}3997.45 &\cellcolor[HTML]{ffff00}\textbf{7994.9} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Northern Virginia &\cellcolor[HTML]{ffd966}4435.17 &\cellcolor[HTML]{ffd966}\textbf{8870.34} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Dallas &\cellcolor[HTML]{ffd966}4716.99 &\cellcolor[HTML]{ffd966}\textbf{9433.98} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Oregon &\cellcolor[HTML]{ffd966}3997.45 &\cellcolor[HTML]{ffff00}\textbf{7994.9} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Los Angeles &\cellcolor[HTML]{ffd966}4798.58 &\cellcolor[HTML]{ffd966}\textbf{9597.16} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Salt Lake City &\cellcolor[HTML]{ffd966}4798.58 &\cellcolor[HTML]{ffd966}\textbf{9597.16} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Las Vegas &\cellcolor[HTML]{ffd966}4435.17 &\cellcolor[HTML]{ffd966}\textbf{8870.34} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}General purpose &\cellcolor[HTML]{ffd966}E2 &\cellcolor[HTML]{ffd966}Custom &\cellcolor[HTML]{ffd966}4 &\cellcolor[HTML]{ffd966}16 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Columbus &\cellcolor[HTML]{ffd966}3997.45 &\cellcolor[HTML]{ffff00}\textbf{7994.9} \\
+\cellcolor[HTML]{ffd966}20 &\cellcolor[HTML]{ffd966}Memory-optimized &\cellcolor[HTML]{ffd966}M2 &\cellcolor[HTML]{ffd966}Megamen &\cellcolor[HTML]{ffd966}416 &\cellcolor[HTML]{ffd966}5888 &\cellcolor[HTML]{ffd966}750 &\cellcolor[HTML]{ffd966}Iowa &\cellcolor[HTML]{ffd966}438575.81 &\cellcolor[HTML]{ffd966}\textbf{877151.62} \\
+\cellcolor[HTML]{ffff00}20 &\cellcolor[HTML]{ffff00}General purpose &\cellcolor[HTML]{ffff00}N1 &\cellcolor[HTML]{ffff00}Custom &\cellcolor[HTML]{ffff00}4 &\cellcolor[HTML]{ffff00}16 &\cellcolor[HTML]{ffff00}750 &\cellcolor[HTML]{ffff00}Iowa &\cellcolor[HTML]{ffff00}\textbf{4317.22} &\cellcolor[HTML]{ffff00}\textbf{8634.44} \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}\end{adjustwidth}
+
 
 \section{Elección de maquina virtual}
   \subsection{Amazon Web Services (AWS)}
@@ -160,20 +228,33 @@ Region &Instancia &vCPU &memoria &almacenamiento &Network &Costo Mensual &Costo 
     En primer lugar, la familia T4g es la más barata, pero tiene un rendimiento menor que las otras dos familias. Por otro lado, la familia c4 es la familia de instancias optimizadas para el cómputo, por lo que tiene un rendimiento superior a las otras dos familias, pero también es más cara. Por último, la familia t2 es la familia de uso general, por lo que tiene un rendimiento medio, pero también es más barata que la familia c4.
 
     En cuanto al almacenamiento, todas las maquinas virtuales de EC2 cuentan con Elastic Block Storage (EBS), el cual, para los requisitos establecidos, tiene un coste de \usd{748.73}.
-    En conclusión, para la m
+    En conclusión, para AWS, se recomienda con creces la region eu-este, ya que tiene los mejores precios. Luego, para la maquina virtual de computo, se recomienda la instancia t4g, ya que tiene un precio de \usd{2452.80} y un rendimiento aceptable. Finalmente, para el almacenamiento, se recomienda la instancia m5.large, ya que es la mas economica de las analizadas y cumple con los requisitos establecidos. El coste total de la maquina virtual durante el plaze de 45 días sera de \usd{7478.20}.
 
   \subsection{Microsoft Azure}
-  \subsection{Google Cloud Platform (GCP)}
 
-\section{Comparación de precios}
-  \subsection{Amazon Web Services (AWS)}
-  \subsection{Microsoft Azure}
+  De los diversos servidores de Microsoft Azure, se ha seleccionado el servidor North Central US.
+
+El servidor North Central US se encuentra en el centro de Estados Unidos y proporciona una baja latencia, tiene los cumplimientos normativos adecuados para brindar los estándares de seguridad y privacidad de datos
+A todo lo mencionado anteriormente debemos agregar que es escalable en capacidad de procesamiento y almacenamiento en función de las necesidades de los usuarios, también cuenta con una arquitectura hibrida que permite a los usuarios implementar soluciones de alta disponibilidad ante desastres.
+Es una buena opción de conectividad para América del Norte, América Latina y Europa.
+Se seleccionó las máquinas virtuales de serie A para los cálculos debido a que cuenta con un rendimiento óptimo para cargas de trabajo de procesamiento, desarrollo, servicios de compilación, sitios web y aplicaciones web de poco tráfico.\cite{microsoft_vms}
+Finalmente, se seleccionó las máquinas virtuales de serie Dps v5 porque nos ofrecen una excelente relación precio-rendimiento, cuentan con una gran cantidad de almacenamiento SSD de alto rendimiento que es lo que buscamos, además de eso son adecuadas para cargas de trabajo empresariales, servidores de aplicaciones, aplicaciones Java y más.
+
+
+
   \subsection{Google Cloud Platform (GCP)}
+  Se ha escogido la locación de Iowa ya que esta se aloja en el centro de Estados Unidos la cual se puede obtener una buena conectividad con los 193 países.Por otro lado, esta no sufre de desastres naturales y tiene un buen suministro eléctrico.
+Además, se escogió la serie E2 debido a que la tabla llamada “Tipo de Carga de Trabajo”\cite{google_machine_types} compara  las series de las  máquinas virtuales en la que se observa  que se tiene más beneficios para crear una base de datos que para hacer 
+Para con
+ ; por lo que se optó por las especificacion mas mínima.
+Para la base de datos, se eligio aquella perteneciente a la familia N1; ya que, a pesar de existir alternativas más baratas (por una diferencia de 639.54 dolares), esta es la que tiene un mejor rendimiento en cuanto a IOPS, a rendimiento de disco y tiene una mayor capacidad de almacenamiento.
 
 \section{Recomendación final}
 
-\section{Imágenes, esquemas y diagramas comparativos}
+Tras comparar los 3 proveedores, llegamos a la conclusión de que AWS es la mejor alternativa, puesto que su precio es el más bajo y tiene un rendimiento aceptable. Además, AWS cuenta con una gran cantidad de servicios que pueden ser útiles para el desarrollo del proyecto, como EBS, el cual puede ser usado como un reemplazo para el segundo grupo de maquinas virtuales reduciendo aun más el costo del proyecto.
 
+\section{Video}
+https://drive.google.com/drive/folders/1m84CubaiXEUUrtVS5KPpIpvOxIJ9c1Zu?usp=sharing
 
 \printbibliography
 
