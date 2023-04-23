@@ -9,6 +9,7 @@
 % \usepackage{changepage,threeparttable} % for wide tables
 \addbibresource{bibliography.bib}
 
+
 \newcommand{\usd}[1]{\SI{#1}[\$\ensuremath{\,}]{}}
 
 
@@ -145,26 +146,18 @@ Region &Instancia &vCPU &memoria &almacenamiento &Network &Costo Mensual &Costo 
     En nuestra comparación de precios por región evaluamos 3 tipos de instancia.
       \begin{table}[!htp]\centering
         \begin{tabular}{|c|c|c|}
+
           T4g	& cheapest          \\
           c4	& compute optimized \\
           t2	& general use       \\
-          d3en & storage opimized \\
-          m5a	& conectadas fisicamente al ssd \\
+          
         \end{tabular}
       \end{table}
+    Decidimos elegir estas 3 instancias en función de la familia a la que pertenecen, ya que cada una de estas familias tiene un propósito diferente.
+    En primer lugar, la familia T4g es la más barata, pero tiene un rendimiento menor que las otras dos familias. Por otro lado, la familia c4 es la familia de instancias optimizadas para el cómputo, por lo que tiene un rendimiento superior a las otras dos familias, pero también es más cara. Por último, la familia t2 es la familia de uso general, por lo que tiene un rendimiento medio, pero también es más barata que la familia c4.
 
-      En cuanto al almacenamiento, la mayoria de maquinas virtuales de AWS utilizan Elastic Block Storage (EBS), el cual es un sistema de almacenamiento donde solo se paga por lo que se utiliza. Sin embargo, en la familia d3en el coste ya incluye un almacenamiento de 14000 HDD, por lo que no es necesario pagar por el almacenamiento adicional.
-
-      \subsubsection*{Maquina de cómputo}
-
-      Para la maquina de cómputo evaluamos 3 familias de instancias, la familia T4g, la familia c4 y la familia t2. En primer lugar, la familia T4g es la más barata, pero tiene un rendimiento menor que las otras dos familias. Por otro lado, la familia c4 es la familia de instancias optimizadas para el cómputo, por lo que tiene un rendimiento superior a las otras dos familias, pero también es más cara. Por último, la familia t2 es la familia de uso general, por lo que tiene un rendimiento medio, pero también es más barata que la familia c4.
-      El coste de almacenamiento en EBS es de \usd{748.73}  por mesasumiendo un uso constante.
-      \subsubsection*{Base de datos}
-
-    En cuanto a la maqina virtual para almacenamiento elegimos 2 familias adicionales, la familia d3en y la familia m5a. La familia d3en es la familia de instancias optimizadas para el almacenamiento, por lo que tiene un rendimiento superior a la familia m5a, pero también es más cara. Por otro lado, la familia m5a tiene la particularidad de estar fisicamente conectada al SSD, por lo que tiene un rendimiento inferior a la familia d3en, pero también es más barata que la familia d3en.
-    El coste de almacenamiento en EBS es de \usd{2339.75} por mes asumiendo un uso constante.
-
-
+    En cuanto al almacenamiento, todas las maquinas virtuales de EC2 cuentan con Elastic Block Storage (EBS), el cual, para los requisitos establecidos, tiene un coste de \usd{748.73}.
+    En conclusión, para la m
 
   \subsection{Microsoft Azure}
   \subsection{Google Cloud Platform (GCP)}
